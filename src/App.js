@@ -5,8 +5,8 @@ function App() {
         </div>
     )
 
-    const macak;
-    
+    const dovla;
+
 }
 
 export default App;
