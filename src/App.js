@@ -1,7 +1,9 @@
+import Nav from "./components/Nav";
+
 function App() {
   return (
-    <div>
-      <h1 className="text-teal-400 text-4xl">Hello World!</h1>
+    <div className="w-full h-screen">
+      <Nav />
     </div>
   );
 }
