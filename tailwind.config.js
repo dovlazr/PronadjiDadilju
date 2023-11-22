@@ -21,6 +21,10 @@ module.exports = {
     fontFamily: {
       "theme-f1": ['"GT Walsheim Pro"', "sans-serif"],
     },
+
+    colors: {
+      "nav-bar-text": '#545454'
+    },
   },
   plugins: [],
 };
