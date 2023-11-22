@@ -21,16 +21,19 @@ const Nav = () => {
               marginRight_: "10px",
             }}
           />
-          <span className="flex-grow ml-4">Pronađi Dadilju</span>
+          <span className="flex-grow ml-4 ">Pronađi Dadilju</span>
         </div>
-        <ul className="md:flex md:items-center mr-20 gap-12" >
-          {
-            Links.map((link) => (
-              <li key={link.name} className="md:ml-8 font-theme-f1 text-lg text-nav-bar-text">
-                <a href={link.link}>{link.name}</a>
-              </li>
-            ))
-          }
+        <ul className="hidden md:flex md:items-center mr-20 gap-12">
+          {Links.map((link) => (
+            <li
+              key={link.name}
+              className="md:ml-8 font-theme-f1 text-lg text-nav-bar-text "
+            >
+              <a href={link.link} className="hover:font-semibold duration-800">
+                {link.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
