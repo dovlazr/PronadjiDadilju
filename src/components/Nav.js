@@ -26,7 +26,7 @@ const Nav = () => {
         <ul className="md:flex md:items-center mr-20 gap-12" >
           {
             Links.map((link) => (
-              <li key={link.name} className="md:ml-8 text-xl font-theme-f1 text-nav-bar-text">
+              <li key={link.name} className="md:ml-8 font-theme-f1 text-lg text-nav-bar-text">
                 <a href={link.link}>{link.name}</a>
               </li>
             ))
