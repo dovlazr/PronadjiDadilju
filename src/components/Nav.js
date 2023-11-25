@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "../images/logic.png";
+import logo from "../images/logo-dark.svg";
 
 const Nav = () => {
-  let Links = [
+  const links = [
     { name: "Ideja", link: "/" },
     { name: "Plan", link: "/" },
     { name: "Projekat", link: "/" },
@@ -15,25 +15,28 @@ const Nav = () => {
           <img
             src={logo}
             alt="logo-image"
-            style={{
-              width: 36.22,
-              height: 32,
-              marginRight_: "10px",
-            }}
+            width="36.22"
+            height="32"
+            className="mr-4"
           />
           <span className="flex-grow ml-4 ">Pronađi Dadilju</span>
         </div>
         <ul className="hidden md:flex md:items-center mr-20 gap-12">
-          {Links.map((link) => (
-            <li
-              key={link.name}
-              className="md:ml-8 font-theme-f1 text-lg text-nav-bar-text "
-            >
-              <a href={link.link} className="hover:font-semibold duration-800">
-                {link.name}
-              </a>
-            </li>
-          ))}
+          {links.map((link, index) => {
+            return (
+              <li
+                key={index}
+                className="md:ml-8 font-theme-f1 text-lg text-nav-bar-text "
+              >
+                <a
+                  href={link.link}
+                  className="hover:font-semibold duration-800"
+                >
+                  {link.name}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
