@@ -28,7 +28,7 @@ function Hero() {
           </p>
         </p>
         <input type="email" id="email" placeholder="Tvoj E-mail" className=" absolute flex border  sm:w-60  start-1 bg-blue-500  border-gray-300 text-white px-4 py-2 rounded-2xl bottom-3" required/>
-       <button className=" rounded-2xl border bg-blue-400 text-white px-4 py-2">Prijavi se na listu čekanja!</button>
+        <button className=" rounded-2xl border bg-blue-400 text-white px-4 py-2">Prijavi se na listu čekanja!</button>
         <div className="w-full md:w-1/2">
           <img src={playground} alt="playground photo" className="w-full" />
         </div>
