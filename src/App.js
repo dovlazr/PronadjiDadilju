@@ -1,12 +1,14 @@
-import Hero from "./components/Hero";
-import Nav from "./components/Nav";
+import "./App.css";
+import React from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="w-full h-screen"> 
-      <Nav />
-      <Hero />
-    </div>
+    <>
+      <Navbar />
+      <Home />
+    </>
   );
 }
 

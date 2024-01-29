@@ -1,0 +1,11 @@
+body{
+    font-family: 'GT Walsheim Pro', sans-serif;
+}
+
+header{
+    z-index: 1000 !important;
+}
+
+.btn-primary{
+    @apply py-4 px-8 gap-2 rounded-[16px] bg-[#60A5FA] font-bold text-white text-lg font-theme-logo
+}
