@@ -1,12 +1,7 @@
 version: '3.7'
 
 services:
-  node_app:
-    build:
-      context: ./node_app
-      dockerfile: Dockerfile
-    ports:
-      - "5000:5000"
+  
 
   react_app:
     build:
@@ -21,8 +16,13 @@ services:
     image: mysql:latest
     ports:
       - "3306:3306"
+    volumes:
+            - mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: pd.408#>1
       MYSQL_DATABASE: pronadji_lako
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
+
+volumes:
+  mysql_data:

@@ -1,12 +1,60 @@
 const express = require('express');
+const mysql = require('mysql2');
 const app = express();
-const port = 5000;
+const port = 4000;
 
 const users = [
   { id: 1, name: 'John Doe' },
   { id: 2, name: 'Jane Doe' },
   { id: 3, name: 'Alice' },
 ];
+
+const connection = mysql.createConnection({
+  host: '127.0.0.1',
+  user: 'admin',
+  password: 'admin',
+  database: 'pronadji_lako'
+});
+
+// connection.query('query example here', (err, results) => {
+//   if (err) {
+//     console.error('Error executing query:', err);
+//     return;
+//   }
+
+//   // Print the query results to the console
+//   console.log('Query results:');
+//   console.log(results);
+
+//   // Close the connection
+//   connection.end((err) => {
+//     if (err) {
+//       console.error('Error closing database connection:', err);
+//       return;
+//     }
+//     console.log('Database connection closed');
+//   });
+// });
+
+connection.query('SELECT * FROM Users', (err, results) => {
+  if (err) {
+    console.error('Error executing query:', err);
+    return;
+  }
+
+  // Print the query results to the console
+  console.log('Query results:');
+  console.log(results);
+
+  // Close the connection
+  connection.end((err) => {
+    if (err) {
+      console.error('Error closing database connection:', err);
+      return;
+    }
+    console.log('Database connection closed');
+  });
+});
 
 app.get('/', (req, res) => {
     res.send("nodejs works")
