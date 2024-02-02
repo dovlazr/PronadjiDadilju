@@ -1,13 +1,11 @@
-import "./App.css";
-import React from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
+import Nav from "./components/Nav";
+import NewHero from "./components/NewHero";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Home />
+    <div className="w-full h-screen">
+      <Nav />
+      <NewHero />
     </div>
   );
 }
