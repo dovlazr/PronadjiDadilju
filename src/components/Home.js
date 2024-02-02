@@ -3,40 +3,41 @@ import playground from "../assets/playground.png";
 
 function Home() {
   return (
-    <div className="bg-background_image_home lg:mt-32">
-      <div className="px-4 lg:px-14 max-w-screen-lg mx-auto min-h-screen h-screen">
-        <div className="flex flex-col md:flex-row-reverse items-start justify-between gap-8  w-full mx-auto  my-28 md:my-8 py-12 ">
-          <div>
-            <img src={playground} alt="playground" className="" />
-          </div>
-          <div>
-            {/* hero text */}
-            <div className="md:w-1/2">
-              <h1 className="font-theme-logo  text-7xl tracking-headerHome bg-gradient-to-r p-2 sm:p-5 md:p-5  from-blue-300 to-pink-300 text-transparent bg-clip-text">
-                Pronađi Dadilju
-              </h1>
-              <p className="font-theme-logo font-[400] w-[509px]  tracking-paragraphHome mb-8 ">
-                Uskoro ćemo ti predstaviti našu inovativnu platformu koja
-                olakšava pronalaženje pouzdanih dadilja!
-                <br />
-                Unesi svoju e-mail adresu i budi deo promene u načinu na koji
-                brinemo o najmlađima.
-              </p>
-              <input
-                className="flex w-full bg-white text-[#8D8D8D] border border-[#D0D0D0] justify-start items-center   font-theme-logo rounded-2xl py-4 pl-4 pr-16 gap-2 leading-tight focus:outline-none focus:bg-white"
-                id="email"
-                type="email"
-                placeholder="Tvoj E-mail"
-              ></input>
-              <button className="flex w-full btn-primary tracking-buttonHome mt-4">
-                Prijavi se na listu čekanja
-              </button>
-              <p className=" w-[509px] font-theme-logo font-normal text-neutral-400 text-xs leading-3 mt-5">
-                *PS Obećavamo da ti nećemo slati gomilu nepotrebnih mejlova!
-              </p>
-            </div>
-          </div>
+    <div className="relative">
+      <div className="bg-background_image_home fixed top-0 left-0 h-screen w-screen bg-no-repeat bg-cover [background-position-y:167px]"></div>
+
+      {/* md:pr-[377px] is because image width is 369px and gap is 8px */}
+      <div className="relative flex flex-col items-start justify-between md:w-[876px] gap-8 p-6 md:p-0 md:mx-auto md:pr-[377px] md:mt-[145px]">
+        <h1 className="text-7xl font-black tracking-headerHome bg-gradient-to-r from-blue-300 to-pink-300 text-transparent bg-clip-text">
+          Pronađi Dadilju
+        </h1>
+
+        <img src={playground} alt="playground" className="h-[163px] w-full object-cover md:absolute md:top-1/2 md:right-0 md:-translate-y-1/2 md:h-[369px] md:w-[369px]" />
+
+        <p className=" font-[400] tracking-paragraphHome">
+          Uskoro ćemo ti predstaviti našu inovativnu platformu koja olakšava
+          pronalaženje pouzdanih dadilja!
+          <br />
+          Unesi svoju e-mail adresu i budi deo promene u načinu na koji brinemo o
+          najmlađima.
+        </p>
+
+        <div className="flex flex-col md:flex-row w-full gap-2">
+          <input
+            className="w-full bg-white text-[#8D8D8D] border border-[#D0D0D0] rounded-2xl focus:outline-none focus:bg-white"
+            id="email"
+            type="email"
+            placeholder="Tvoj E-mail"
+          />
+
+          <button className="w-full btn-primary">
+            Prijavi se na listu čekanja
+          </button>
         </div>
+
+        <p className="font-normal text-neutral-400 text-xs leading-3">
+          *PS Obećavamo da ti nećemo slati gomilu nepotrebnih mejlova!
+        </p>
       </div>
     </div>
   );

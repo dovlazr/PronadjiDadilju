@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
-import { Link } from "react-scroll";
 
 // react icons
 import { FaXmark, FaBars } from "react-icons/fa6";
@@ -38,7 +37,7 @@ function Navbar() {
   ];
 
   return (
-    <header className="w-full md:bg-transparent fixed top-0 left-0 right-0 gap-12">
+    <header className="w-full md:bg-transparent  gap-12">
       <nav
         className={`py-6 lg:px-16 px-6 ${
           isSticky
@@ -58,17 +57,14 @@ function Navbar() {
 
           {/* nav items for large devices */}
           <ul className="md:flex space-x-12 hidden">
-            {navItems.map(({ link, path }) => (
-              <Link
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={-100}
-                key={path}
+            {navItems.map(({ link, path }, index) => (
+              <a
+                href={path}
+                key={index}
                 className="block text-[18px] leading-[18px] text-navBarTextColor hover:font-semibold first:font-semibold cursor-pointer"
               >
                 {link}
-              </Link>
+              </a>
             ))}
           </ul>
 
@@ -93,17 +89,14 @@ function Navbar() {
             isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"
           }`}
         >
-          {navItems.map(({ link, path }) => (
-            <Link
-              to={path}
-              spy={true}
-              smooth={true}
-              offset={-100}
-              key={path}
+          {navItems.map(({ link, path }, index) => (
+            <a
+              href={path}
+              key={index}
               className="block text-[18px] leading-[18px] text-navBarTextColor hover:font-semibold first:font-semibold cursor-pointer"
             >
               {link}
-            </Link>
+            </a>
           ))}
         </div>
       </nav>
